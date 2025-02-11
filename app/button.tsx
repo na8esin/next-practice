@@ -3,5 +3,10 @@
 import { create } from './actions'
 
 export function Button() {
-  return <button onClick={() => create()}>Create</button>
+  const hundleClick = async () => {
+    const createe = await create()
+    console.log(createe)
+  }
+
+  return <button onClick={() => hundleClick()}>Create</button>
 }
